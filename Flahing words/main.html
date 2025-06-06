@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <title>Word Practice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+            /* 添加一个简约的渐变背景作为装饰 */
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px); /* 毛玻璃效果 */
+        }
+
+        /* 标题样式 */
+        h1 {
+            font-family: 'ZCOOL KuaiLe', cursive; /* 使用一个更活泼的艺术字体 */
+            font-size: 3.5em; /* 调大字号 */
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        /* 主体内容样式 */
+        #word {
+            font-size: 4em; /* 显著增大单词字号 */
+            font-weight: bold;
+            color: #34495e;
+            margin: 20px 0;
+            min-height: 80px; /* 防止内容变化时跳动 */
+        }
+
+        #hint, #meaning {
+            font-size: 1.2em;
+            min-height: 30px; /* 防止内容变化时跳动 */
+            transition: opacity 0.3s ease;
+        }
+
+        #hint {
+            color: #7f8c8d;
+        }
+
+        #meaning {
+            font-weight: bold;
+            color: #16a085;
+        }
+
+        /* 每日一句样式 */
+        #daily-quote {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ccc;
+            font-family: 'Noto Serif SC', serif; /* 使用一个优雅的宋体 */
+            font-size: 1.2em;
+            color: #555;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Flashing Word</h1>
+        <div id="word">加载中...</div>
+        <p id="hint"></p>
+        <p id="meaning"></p>
+        <div id="daily-quote">每日一句加载中...</div>
+    </div>
+
+    <script src="main_script.js"></script>
+</body>
+</html>
