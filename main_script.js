@@ -5,7 +5,7 @@ let currentVersion = "A"; // A表示未显示释义，B表示已显示释义
 //背单词功能
 async function loadwords() {
     try {
-        const response = await fetch('https://Kattleyan.github.io/private-homework/cet6_words.json');
+        const response = await fetch('https://Kattleyan.github.io/homework/cet6_words.json');
         const rawWords = await response.json();
         //初始化单词状态
         wordList = rawWords.map(word => {
@@ -92,7 +92,7 @@ document.addEventListener("keydown", function(event) {
 //每日一句功能
 async function loadDailyQuote() {
     try {
-        const response = await fetch('https://Kattleyan.github.io/private-homework/daily_quotes.json');
+        const response = await fetch('https://Kattleyan.github.io/homework/daily_quotes.json');
         const quotes = await response.json();
         const today = new Date();
         const index = today.getDate() % quotes.length;
